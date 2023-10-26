@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.mapContainerWrapper {
+
+  width: '900px';
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: 0%;
+}
+
+.margin {
+  margin-left: 20px;
+}
+
+.margin-table {
+  margin:20vh;
+}
+
+.margin-top {
+  margin-top: 4vh;
+}
+
+.text {
+  color: black;
+  background-color: aliceblue;
+  letter-spacing: 4px;
+}
+
+.chartTitle {
+  font-size: 27px;
+  font-weight: 400;
+
+  margin-bottom: 3vh;
+}
+
+.button {
+  background-color: #28282B;
+  color: #F2F3F4;
+  padding: 10px;
+  margin: 10px;
+}
+
+nav{
+  padding-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  width: 100%;
+  top: 0;
+  position: absolute;
+
+  background-color: "black"
+}
+
+.content {
+  margin-top: 15vh;
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+.homebody {
+    background: 'white';
+
+      /* background-image: url('/hima.jpg'); */
+      background-size: cover; /* Adjust this to your needs */
+      background-position: center; /* Adjust this to your needs */
+}
+
+body {
+  /* color: rgb(var(--foreground-rgb)); */
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+    )
+    rgb(var(--background-start-rgb));
+    background: 'white';
+
+      background-image: url('/hima.jpg');
+      background-size: cover; /* Adjust this to your needs */
+      background-position: center; /* Adjust this to your needs */
+}
+
+.foo {
+  background-color: #ef4444;
+  color: #F2F3F4;
+
+  /* font-family: Montserrat; */
+  font-size: 17px;
+  font-weight: 200;
+  line-height: 1.5;
+
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  margin-top: 4vh;
+  text-align: center;
+}
+
+
+.container {
+  text-align: center; /* Center text horizontally */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; /* Center text vertically */
+  /* align-items: center; Center text horizontally and vertically */ 
+}
+
+.box {
+  background-color: #28282B;
+  color: #F2F3F4;
+  text-align: center; /* Center text horizontally */
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+
+  margin-top: 7vh;
+  margin-bottom: 7vh;
+
+  padding: 20px;
+  
+  
+} 
+
+.table {
+  display: flex;
+  flex-direction: row;
+
+  height: 20vh;
+}
+
+/* pages/index.module.css */
+.box-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.centre {
+  text-align: center;
+}
+
+.notTitle {
+  font-weight: 700;
+  font-size: 20px;
+  font-Family: 'Didot, serif'
+}
+
+.Thanks {
+  font-weight: 900;
+  font-size: 20px;
+
+  font-style: bold;
+  color:#28282B
+
+}
+
+.image-list-h {
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 10px
+}
+
+.main {
+  width: 100vw;
+  min-height: 70vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  padding: 120px 24px 160px 24px;
+  pointer-events: none;
+}
+
+@font-face {
+  font-family: 'Didot';
+  src: url('/fonts/didot-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Didot';
+  src: url('/fonts/didot-italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Didot';
+  src: url('/fonts/didot-bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Didot';
+  src: url('/fonts/didot-bolditalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@media screen and (max-width: 640px) {
+  .main {
+    padding: 0;
+  }
+}
+
+/* Tailwind Styles */
+
+.app {
+  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
+}
+
+.black_btn {
+  @apply rounded-full border border-black bg-black py-1.5 px-5 text-white transition-all hover:bg-white hover:text-black text-center text-sm font-inter flex items-center justify-center;
+}
+
+.outline_btn {
+  @apply rounded-full border border-black bg-transparent py-1.5 px-5 text-black transition-all hover:bg-black hover:text-white text-center text-sm font-inter flex items-center justify-center;
+}
+
+.head_text {
+  @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-6xl;
+}
+
+
+/* Nav Component */
+.logo_text {
+  @apply max-sm:hidden font-satoshi font-semibold text-lg text-black tracking-wide;
+}
+
+.dropdown {
+  @apply absolute right-0 top-full mt-3 w-full p-5 rounded-lg bg-white min-w-[210px] flex flex-col gap-2 justify-end items-end;
+}
+
+.dropdown_link {
+  @apply text-sm font-inter text-gray-700 hover:text-gray-500 font-medium;
+}
+
+/* PromptCard Component */
+
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+.flex-start {
+  @apply flex justify-start items-start;
+}
+
+.flex-end {
+  @apply flex justify-end items-center;
+}
+
+.flex-between {
+  @apply flex justify-between items-center;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  margin-bottom: 10px;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 50%; */
+}
+
+.disclaimer {
+  /* margin-left: 35vh; */
+  margin-bottom: 10vh;
+  color: #ef4444;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.arti {
+  /* margin-left: 31vh; */
+  margin-bottom: 4vh;
+  color:antiquewhite;
+  font-size: 20px;
+  background-color: #28282B;
+  line-height: 2;
+  border-radius:15px;
+  padding: 10px;
+
+
+}
+
+.custom-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #101010;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.buttonEnd:hover {
+  background-color: #f7f7f4; /* Change to the highlight color you prefer */
+  color: #050505; /* Change to the highlight text color you prefer */
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+
