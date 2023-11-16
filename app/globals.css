@@ -65,42 +65,6 @@ nav{
   margin-top: 15vh;
 }
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-.homebody {
-    background: 'white';
-
-      /* background-image: url('/hima.jpg'); */
-      background-size: cover; /* Adjust this to your needs */
-      background-position: center; /* Adjust this to your needs */
-}
-
-body {
-  /* color: rgb(var(--foreground-rgb)); */
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-    )
-    rgb(var(--background-start-rgb));
-    background: 'white';
-
-      background-image: url('/hima.jpg');
-      background-size: cover; /* Adjust this to your needs */
-      background-position: center; /* Adjust this to your needs */
-}
 
 .foo {
   background-color: #ef4444;
@@ -306,7 +270,7 @@ body {
   margin-bottom: 4vh;
   color:antiquewhite;
   font-size: 20px;
-  background-color: #28282B;
+  background-color: rgb(239 68 68);
   line-height: 2;
   border-radius:15px;
   padding: 10px;

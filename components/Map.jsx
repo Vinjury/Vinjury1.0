@@ -163,7 +163,7 @@ const Map = () => {
       }}
       projectionConfig={{
         scale: 747,
-        center: [104, 34],
+        center: [104, 36],
       }}
       fill="white"
       stroke="black"

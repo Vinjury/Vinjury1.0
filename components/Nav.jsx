@@ -12,7 +12,7 @@ const Nav = () => {
 const [toggleDropdown, setToggleDropdown] = useState(false);
 
 return (
-  <nav className='flex-between w-full mb-16 pt-3'>
+  <nav className='flex-between lg:w-[115%] mb-16 pt-3 bg-stone-50 px-3 pb-3'>
     <Link href='/' className='flex gap-2 flex-center'>
       <Image
         src='/logo2.png'
@@ -28,19 +28,19 @@ return (
     <div className='sm:flex hidden'>
         <div className='flex gap-3 md:gap-5 p-3'>
         <Link href='/' className='"block mt-4 lg:inline-block lg:mt-0 to-black mr-4 group relative'>
-         <p className='logo_text transition-colors group-hover:text-white'>首頁</p>
+         <p className='logo_text transition-colors group-hover:text-red-400'>首頁</p>
        </Link>
 
        <Link href='/background' className='"block mt-4 lg:inline-block lg:mt-0 to-black mr-4 group relative'>
-         <p className='logo_text transition-colors group-hover:text-white'>治療新冠和疫苗解毒訊息</p>
+         <p className='logo_text transition-colors group-hover:text-red-400'>治療新冠和疫苗解毒訊息</p>
        </Link>
 
        <Link href='/Statistics' className='"block mt-4 lg:inline-block lg:mt-0 to-black mr-4 group relative'>
-         <p className='logo_text transition-colors group-hover:text-white'>搜尋詳細數據</p>
+         <p className='logo_text transition-colors group-hover:text-red-400'>搜尋詳細數據</p>
        </Link>
 
        <Link href='/About' className='"block mt-4 lg:inline-block lg:mt-0 to-black mr-4 group relative'>
-         <p className='logo_text transition-colors group-hover:text-white'>願景</p>
+         <p className='logo_text transition-colors group-hover:text-red-400'>願景</p>
        </Link>
        <Link href='https://gettr.com/user/vinjury' className='"block mt-4 lg:inline-block lg:mt-0 to-black mr-4 group relative'>
               <Image
@@ -51,9 +51,9 @@ return (
                 alt='gettr'
               />
             </Link>
-            <Link href='https://gettr.com/user/vinjury'  className='"block mt-4 lg:inline-block lg:mt-0 to-black mr-4 group relative'>
+            <Link href='https://x.com/vInjuryProject'  className='"block mt-4 lg:inline-block lg:mt-0 to-black mr-4 group relative'>
               <Image
-                src='x-logo.svg'
+                src='/logo-black.png'
                 width={30}
                 height={37}
                 className='logo_text'
@@ -105,6 +105,12 @@ return (
               >
                 願景
               </Link>
+              <Link href='https://gettr.com/user/vinjury'  className='dropdown_link' onClick={() => setToggleDropdown(false)}>
+              关注我们的Gettr账号
+            </Link>
+            <Link href='https://x.com/vInjuryProject'  className='dropdown_link' onClick={() => setToggleDropdown(false)}>
+              关注我们的X账号
+            </Link>
             </div>
           )}
         </div>

@@ -6,7 +6,7 @@ const page = () => {
   return (
     <> 
     
-   <div className="content image-container flex justify-center">
+   <div className="mt-[150px] image-container flex justify-center">
     <div className='flex justify-center'>
    <div className="mt-[100px] lg:my-10 max-w-5xl w-full items-center justify-between font-mono text-sm disclaimer">
    

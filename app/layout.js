@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
       <main className='app'>
-        <Nav id="nav-bar" />{children}
+        <Nav className = "nav-bar"/>{children}
         </main>
         <footer>
         <Foot />

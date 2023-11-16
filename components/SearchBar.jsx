@@ -1,103 +1,5 @@
 'use client'
 
-// import React, { useState } from 'react';
-// import { useRouter } from 'next/navigation'
-// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-// import Papa from 'papaparse';
-
-// function SearchBar() {
-//     const router = useRouter();
-//   const [searchTerm, setSearchTerm] = useState('');
-
-//   const [parsedData, setParsedData] = useState([]);
-//   const [tableRows, setTableRows] = useState([]);
-//   const [values, setValues] = useState([]);
-
-//   const validProvinces = {
-//     北京: "Beijing",
-//     天津: "Tianjin",
-//     河北: "Hebei",
-//     山西: "Shanxi",
-//     内蒙古: "Inner Mongolia",
-//     辽宁: "Liaoning",
-//     吉林: "Jilin",
-//     黑龙江: "Heilongjiang",
-//     上海: "Shanghai",
-//     江苏: "Jiangsu",
-//     浙江: "Zhejiang",
-//     安徽: "Anhui",
-//     福建: "Fujian",
-//     江西: "Jiangxi",
-//     山东: "Shandong",
-//     河南: "Henan",
-//     湖北: "Hubei",
-//     湖南: "Hunan",
-//     广东: "Guangdong",
-//     广西: "Guangxi",
-//     海南: "Hainan",
-//     重庆: "Chongqing",
-//     四川: "Sichuan",
-//     贵州: "Guizhou",
-//     云南: "Yunnan",
-//     西藏: "Tibet",
-//     陕西: "Shaanxi",
-//     甘肃: "Gansu",
-//     青海: "Qinghai",
-//     宁夏: "Ningxia",
-//     新疆: "Xinjiang",
-//     香港: "Hong Kong",
-//     澳门: "Macao",
-//     台湾: "Taiwan",
-//   };
-  
-//   const handleSearch = () => {
-//     if (searchTerm) {
-//       const englishName = validProvinces[searchTerm];
-//       if (englishName) {
-
-//   useEffect(() => {
-//     // Load the CSV file directly using the relative path (assuming it's in the same directory as your component).
-//     fetch(`/${englishName}.csv`)
-//       .then((response) => response.text())
-//       .then((csvData) => {
-//         Papa.parse(csvData, {
-//           header: true,
-//           skipEmptyLines: true,
-//           complete: function (results) {
-//             const rowsArray = [results.meta.fields]; // Use fields from metadata for table header
-//             const valuesArray = results.data;
-
-//             setParsedData(valuesArray);
-//             setTableRows(rowsArray[0]);
-//             setValues(valuesArray);
-//           },
-//         });
-//       });
-//   }, []);
-
-//       } else {
-//         alert("The entered location is not a valid province in China");
-//       }
-//     } else {
-//       alert("Invalid input");
-//     }
-//   };  
-
-//   return (
-//     <div>
-//       <input
-//         type="text"
-//         placeholder="请输入想查找省份的中文名称"
-//         value={searchTerm}
-//         onChange={(e) => setSearchTerm(e.target.value)}
-//       />
-//       <button onClick={handleSearch}>Search</button>
-//     </div>
-//   );
-// }
-
-// export default SearchBar;
-
 
 import React, { useState, useEffect } from 'react';
 import Papa from 'papaparse';
@@ -282,28 +184,50 @@ function SearchBar() {
 
   return (
     <>
-    <div className="content flex justify-center">
-      <input
+
+      <div class='max-w-md mx-auto mt-[170px]'>
+    <div class="relative flex items-center w-full h-12 rounded-lg focus-within:shadow-lg bg-black overflow-hidden">
+        <div class="grid place-items-center h-full w-12 text-gray-300 ">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" onClick={handleSearch}>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+        </div>
+
+        <input
+        class="peer h-full w-64 outline-none text-sm text-gray-700 pr-2 px-4"
         type="text"
-        placeholder="请输入想查找省份的中文名称"
+        id="search"
+        placeholder="请输入想查找省份的中文名称" 
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-      />
-      <button onClick={handleSearch}>Search</button>
-      </div>
-      <br></br>
+        /> 
+    </div>
+</div>
 
       {showTable && parsedData.length > 0 && (
         
-        <div className="w-[570px] mt-[50px]">
-            <input
+        <div className="w-[570px] mt-[170px]">
+                 <div class='max-w-md mx-auto mt-[170px]'>
+    <div class="relative flex items-center w-full h-12 rounded-lg focus-within:shadow-lg bg-white overflow-hidden">
+        <div class="grid place-items-center h-full w-12 text-gray-300 ">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" onClick={handleSearch}>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+        </div>
+
+        <input
+        class="peer h-full w-64 outline-none text-sm text-gray-700 pr-2 px-4"
         type="text"
-        placeholder="请输入想查找省份的中文名称"
+        id="search"
+        placeholder="请输入想查找省份的中文名称" 
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-      />
-      <button onClick={handleSearch}>Search</button>
+        /> 
+    </div>
+</div>
+
         {/* Table with borders between columns and rows */}
+        <div className='mt-[50px]'>
         <table style={{ borderCollapse: 'collapse', width: '100%' }}>
           <thead>
             {tableRows ? (
@@ -356,6 +280,7 @@ function SearchBar() {
             })}
           </tbody>
         </table>
+        </div>
       </div>
       )}
     </>

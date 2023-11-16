@@ -1,36 +1,26 @@
 'use client'
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { useRouter } from 'next/navigation'
 
 function getIntroOfPage(label) {
-    if (label === 'DKA') {
-      return '糖尿病酮症酸中毒';
-    } if (label === 'ALL') {
-      return '急性淋巴性白血病';
-    } if (label === 'AML') {
-      return '急性骨髓性白血病';
-    } if (label === 'ALS') {
-      return '肌萎缩性脊髓侧索硬化症';
-    } if (label === 'T1D') {
-      return '1型糖尿病';
-    } if (label === 'AA') {
-      return '重型再生障碍性贫血';
-    }if (label === 'SLE') {
-        return '狼疮性肾炎';
-      }if (label === 'ATL') {
-        return '成人T細胞淋巴性白血病';
-      }if (label === 'MPAL') {
-        return '混合表型急性白血病';
-      }if (label === 'MDS') {
-        return '骨髓增生异常综合征';
-      }if (label === 'CGL') {
-        return '慢性粒细胞白血病 ';
-      }if (label === 'APL') {
-        return '急性早幼粒细胞白血病';
-      }if (label === 'DMD') {
-        return '脱髓鞘脊髓炎';
-      }if (label === 'LADA') {
-        return 'LADA糖尿病(一型前期)';
+  
+    if (label === '白血病') {
+      return '白血病';
+    } if (label === '糖尿病') {
+      return '糖尿病';
+    } if (label === '神经系统疾病') {
+      return '神经系统疾病';
+    } if (label === '自身免疫疾病') {
+      return '自身免疫疾病';
+    } if (label === '心脑血管疾病') {
+      return '心脑血管疾病';
+    }if (label === '癌症') {
+      return '癌症';
+    } if (label === '呼吸系统疾病') {
+        return '呼吸系统疾病';
+      }if (label === '其他') {
+        return '其他疾病是除以上疾病外病例数较少的一部分疾病种类';
       }
   }
   
@@ -49,16 +39,18 @@ function getIntroOfPage(label) {
   }
 
 const BarChartComponent = () => {
+  const router = useRouter();
+
   const data = [
 
-    { category: 'AML', value: 627 }, { category: 'DKA', value: 534 }, { category: 'ALL', value: 422 }, { category: 'T1D', value: 326 }, { category: 'ALS', value: 227 }, { category: 'AA', value: 93 }, { category: 'SLE', value: 79 }, { category: 'ATL', value: 66 }, { category: 'MPAL', value: 61 }, { category: 'MDS', value: 37 }, { category: 'CGL', value: 31 }, { category: 'APL', value: 19 }, { category: 'DMD', value: 15 }, { category: 'LADA', value: 11 }
+    { category: '白血病', value: 1309 }, { category: '糖尿病', value: 878 }, { category: '神经系统疾病', value: 263 }, { category: '自身免疫疾病', value: 216 }, { category: '心脑血管疾病', value: 17 }, { category: '癌症', value: 2 }, { category: '呼吸系统疾病', value: 2 }, { category: '其他', value: 12 }
   ];
 
   return (
     <div className='text-center'>
       <h2 className='chartTitle text-center'>疾病种类与其病例数柱状图</h2>
-      <ResponsiveContainer width={800} height={400}>
-        <BarChart data={data} scale="point" barSize={20}>
+      <ResponsiveContainer width={1000} height={400}>
+        <BarChart data={data} scale="point" barSize={40}>
           <CartesianGrid strokeDasharray="4 4" stroke="black"/>
           <XAxis dataKey="category" stroke="black"/>
           <YAxis stroke="black"/>
