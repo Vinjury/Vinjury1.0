@@ -9,7 +9,6 @@ export default function Home() {
     <>
     <div className='sm:flex hidden'>
     <div className="mapContainerWrapper">
-    <SearchBar />
     <Map /> 
     </div>
     </div>
