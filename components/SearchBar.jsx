@@ -3,6 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Papa from 'papaparse';
+import Image from "next/image";
 
 function SearchBar() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -184,8 +185,17 @@ function SearchBar() {
 
   return (
     <>
-
-      <div class='max-w-md mx-auto mt-[170px]'>
+    <div className='relative'>
+      <Image
+        src='/logo2.png'
+        alt='logo'
+        width={140}
+        height={200}
+        className='absolute top-1/2 right-1/4 object-cover'
+        
+      />
+      
+      <div class='max-w-md mx-auto mt-[200px]'>
     <div class="relative flex items-center w-full h-12 rounded-lg focus-within:shadow-lg bg-black overflow-hidden">
         <div class="grid place-items-center h-full w-12 text-gray-300 ">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" onClick={handleSearch}>
@@ -194,19 +204,20 @@ function SearchBar() {
         </div>
 
         <input
-        class="peer h-full w-64 outline-none text-sm text-gray-700 pr-2 px-4"
+        class="peer h-full w-64 outline-none text-sm text-gray-700 pr-2 px-4 "
         type="text"
         id="search"
         placeholder="请输入想查找省份的中文名称" 
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         /> 
+        </div>
     </div>
 </div>
 
       {showTable && parsedData.length > 0 && (
         
-        <div className="w-[570px] mt-[170px]">
+        <div className="w-[570px]">
                  <div class='max-w-md mx-auto mt-[170px]'>
     <div class="relative flex items-center w-full h-12 rounded-lg focus-within:shadow-lg bg-white overflow-hidden">
         <div class="grid place-items-center h-full w-12 text-gray-300 ">

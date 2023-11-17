@@ -6,7 +6,7 @@ const page = () => {
   return (
     <> 
     
-   <div className="mt-[150px] image-container flex justify-center">
+   <div className="mt-[100px] image-container flex justify-center">
     <div className='flex justify-center'>
    <div className="mt-[100px] lg:my-10 max-w-5xl w-full items-center justify-between font-mono text-sm disclaimer">
    
@@ -82,7 +82,7 @@ const page = () => {
 
     <div className=' mt-[70px] flex justify-center w-full'>
     <div className='arti flex justify-center w-[900px]'>
-    <p>除青蒿素之外，伊維菌素也是一種可以幫助排除體內疫苗的藥物<br></br>我們已將COVID-19前線危重護理聯盟(FLCCC)的關於伊維菌素的鏈接公佈在下面，大家有需要可以訪問</p>
+    <p>除青蒿素之外，伊維菌素也是一種可以幫助排除體內疫苗的藥物<br></br>我們已將COVID-19前線危重護理聯盟(FLCCC)的關於伊維菌素的鏈接公佈在下面，大家有需要可以訪問以下連結</p>
     </div>
     </div>
 

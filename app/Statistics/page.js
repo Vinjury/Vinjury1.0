@@ -13,10 +13,8 @@ export default function Home() {
     </div>
     </div>
 
-    <div className='content sm:hidden flex relative'>
-        <div className='flex'>
+    <div className='mt-[150px] sm:hidden flex relative'>
           <SearchBar />
-        </div>
         </div>
     </>
   );

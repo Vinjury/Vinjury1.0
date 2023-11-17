@@ -26,11 +26,7 @@ const page = () => {
     <p>
     您在這個介面可以找到更多的關於其他不同种类疾病的數據。
     <br></br>
-包括癌症，呼吸系统疾病，猝死，和其他在此次数据中出现较少的疾病。
-{/* <br></br>
-第二個表格關於接種不同年齡層的患者對應的數量。
-<br></br>
-第二個表格關於接種不同性別的病人對應的數量。 */}
+    包括癌症，呼吸系統疾病，猝死，和其他在此數據中出現較少的疾病。
 </p>
 </div>
   <div className=" mb-32 text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:text-left w-full flex justify-center">
