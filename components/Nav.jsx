@@ -107,14 +107,14 @@ return (
 
 <div class="absolute right-0 z-10 mt-[50px] w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
 <div class="py-1" role="none">
-  <a href="/" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0" onClick={() => setToggleDropdown(false)}>首頁</a>
-  <a href="/background" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1" onClick={() => setToggleDropdown(false)}>疫苗解毒訊息</a>
-  <a href="/Treatment" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2" onClick={() => setToggleDropdown(false)}>治療新冠訊息</a>
-  <a href="/Statistics" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2" onClick={() => setToggleDropdown(false)}>搜尋詳細數據</a>
-  <a href="/About" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2" onClick={() => setToggleDropdown(false)}>聯繫我们与愿景</a>
-  <a href="/Appeal" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2" onClick={() => setToggleDropdown(false)}>呼吁建立新冠疫苗伤害保障救助机制倡议书</a>
-  <a href="https://gettr.com/user/vinjury" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2" onClick={() => setToggleDropdown(false)}>关注我们的Gettr账号</a>
-  <a href="https://x.com/vInjuryProject" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2" onClick={() => setToggleDropdown(false)}>关注我们的X账号</a>
+  <Link href="/" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0" onClick={() => setToggleDropdown(false)}>首頁</Link>
+  <Link href="/background" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1" onClick={() => setToggleDropdown(false)}>疫苗解毒訊息</Link>
+  <Link href="/Treatment" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2" onClick={() => setToggleDropdown(false)}>治療新冠訊息</Link>
+  <Link href="/Statistics" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2" onClick={() => setToggleDropdown(false)}>搜尋詳細數據</Link>
+  <Link href="/About" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2" onClick={() => setToggleDropdown(false)}>聯繫我们与愿景</Link>
+  <Link href="/Appeal" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2" onClick={() => setToggleDropdown(false)}>呼吁建立新冠疫苗伤害保障救助机制倡议书</Link>
+  <Link href="https://gettr.com/user/vinjury" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2" onClick={() => setToggleDropdown(false)}>关注我们的Gettr账号</Link>
+  <Link href="https://x.com/vInjuryProject" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2" onClick={() => setToggleDropdown(false)}>关注我们的X账号</Link>
 </div>
 </div>
           )}
