@@ -46,7 +46,7 @@ return (
         {isDropdownVisible && (
             <a className='dropdownExtra'>
               <Link
-                href='/Background'
+                href='/background'
                 className='dropdown_link'
               >
                 疫苗解毒信息
@@ -108,7 +108,7 @@ return (
 <div class="absolute right-0 z-10 mt-[50px] w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
 <div class="py-1" role="none">
   <a href="/" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0" onClick={() => setToggleDropdown(false)}>首頁</a>
-  <a href="/Background" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1" onClick={() => setToggleDropdown(false)}>疫苗解毒訊息</a>
+  <a href="/background" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1" onClick={() => setToggleDropdown(false)}>疫苗解毒訊息</a>
   <a href="/Treatment" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2" onClick={() => setToggleDropdown(false)}>治療新冠訊息</a>
   <a href="/Statistics" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2" onClick={() => setToggleDropdown(false)}>搜尋詳細數據</a>
   <a href="/About" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2" onClick={() => setToggleDropdown(false)}>聯繫我们与愿景</a>
